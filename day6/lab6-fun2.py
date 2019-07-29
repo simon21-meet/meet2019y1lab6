@@ -9,11 +9,31 @@ turtle.goto(0,0)
 #turtle.onkey(up, "Up")
 #turtle.goto(0,0)
 #turtle.listen()
+def on_move():
+    x, y = turtle.pos()
+    if turtle.direction=="Up":
+        turtle.goto(x,y+100)
+    elif turtle.direction=="Down":
+        turtle.goto(x,y-100)
+    elif turtle.direction=="Left":
+        turtle.left(x+100,y)
+    else:
+        turtle.right(x-100,y)
 turtle.direction=None
 def up():
     turtle.direction="Up"
-    print("you pressed the up key")
+    on_move()
 turtle.onkey(up, "Up")
 turtle.listen()
-def on_move():
+ 
+def down():
+    turtle.direction="Down"
+    on-move
+turtle.mainloop()
+        
+    
+    
+        
+        
+    
     
