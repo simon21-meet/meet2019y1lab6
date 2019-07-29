@@ -16,9 +16,9 @@ def on_move():
     elif turtle.direction=="Down":
         turtle.goto(x,y-100)
     elif turtle.direction=="Left":
-        turtle.left(x+100,y)
+        turtle.goto(x-100,y)
     else:
-        turtle.right(x-100,y)
+        turtle.goto(x+100,y)
 turtle.direction=None
 def up():
     turtle.direction="Up"
@@ -28,7 +28,22 @@ turtle.listen()
  
 def down():
     turtle.direction="Down"
-    on-move
+    on_move()
+turtle.onkey(down, "Down")
+turtle.listen()
+
+def left():
+    turtle.direction= "Left"
+    on_move()
+turtle.onkey(left, "Left")
+turtle.listen()
+
+def right():
+    turtle.direction="Right"
+    on_move()
+turtle.onkey(right, "Right")
+turtle.listen()
+
 turtle.mainloop()
         
     
